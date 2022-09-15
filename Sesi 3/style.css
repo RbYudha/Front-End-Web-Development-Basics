@@ -1,0 +1,64 @@
+/* div untuk block element */
+div {
+    border: 1px solid red;
+    /* jarak kosong diluar box */
+    margin: 30px;
+    /* jarak kosong didalam box */
+    padding: 10px;
+    /* Static tidak terpengaruh oleh properti top, bottom, left, right. */
+}
+
+div.static {
+    position: static;
+    border: 7px solid black;
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: teal;
+    border: 3px black;
+    padding: 50px;
+    font-size: 20px;
+    z-index: 999;
+  }
+
+div.relative-air {
+    position: relative;
+    border: 3px solid green;
+    left: 10px;
+}
+
+div.relative-water {
+    position: relative;
+    border: 3px solid blue;
+    left: 10px;
+}
+div.relative-fire {
+    position: relative;
+    border: 3px solid red;
+    left: 10px;
+}
+div.relative-earth {
+    position: relative;
+    border: 3px solid yellow;
+    left: 10px;
+}
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    border: 5px solid #73AD21;
+  }
+
+  div.absolute {
+    position: absolute;
+    top: 180px;
+    right: 20px;
+    width: 400px;
+    height: 520px;
+    border: 6px solid purple;
+  }
