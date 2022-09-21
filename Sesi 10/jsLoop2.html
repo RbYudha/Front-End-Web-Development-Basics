@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping for</title>
+</head>
+<body>
+    <script>
+        // cetak angka 1-10 menggunakan for loop
+        // for (let n = 1; n <= 10; n++) {
+        //     console.log("Angka "+n);
+        // }
+
+        // mengembalikan nilai
+        // let jumlah = 0;
+        // for (let n = 5; n > 0; n--) {
+        //     jumlah += n;
+        //     console.log("Jumlah saat ini " +jumlah);
+        // }
+        // console.log("Jumlah akhir "+jumlah);
+
+        // cetak angka 10-1
+        // for (let n = 10; n >= 1; n--) {
+        //     console.log("Angka "+n);
+        // }
+
+        // angka genap 1-10
+        // for (let n = 2; n <= 10;) {
+        //     console.log("Angka "+n);
+        //     n += 2;
+        // }
+
+        // angka ganjil 1-10
+        // for (let n = 1; n <= 10;) {
+        //     console.log("Angka "+n);
+        //     n += 2;
+        // }        
+
+        // Cetak huruf vokal pada kalimat bootcamp CIMB Niaga
+        // const kalimat = "bootcamp cimb niaga";
+        // for (let vocal = 0; vocal < kalimat.length; vocal++) {
+        //     if ( kalimat[vocal] == 'a' ||
+        //          kalimat[vocal] == 'i' || 
+        //          kalimat[vocal] == 'u' || 
+        //          kalimat[vocal] == 'e' || 
+        //          kalimat[vocal] == 'o') {
+        //         console.log("vokal = " + kalimat[vocal]);
+        //     }
+        // }
+
+        // Cetak huruf selain vokal pada kalimat bootcamp CIMB Niaga
+        // const kalimat = "bootcamp cimb niaga";
+        // for (let vocal = 0; vocal < kalimat.length; vocal++) {
+        //     if ( kalimat[vocal] != 'a' &&
+        //          kalimat[vocal] != 'i' && 
+        //          kalimat[vocal] != 'u' && 
+        //          kalimat[vocal] != 'e' && 
+        //          kalimat[vocal] != 'o' &&
+        //          kalimat[vocal] != ' ') {
+        //         console.log("vokal = " + kalimat[vocal]);
+        //     }
+        // }
+
+        // Cetak huruf selain vokal pada kalimat bootcamp CIMB Niaga secara mendatar
+        const kalimat = "bootcamp cimb niaga";
+        let save = "";
+        for (let vocal = 0; vocal < kalimat.length; vocal++) {
+            if ( kalimat[vocal] != 'a' && kalimat[vocal] != 'i' && kalimat[vocal] != 'u' && kalimat[vocal] != 'e' && 
+                 kalimat[vocal] != 'o' && kalimat[vocal] != '') {
+                 //save += kalimat[vocal];
+                 save = save + kalimat[vocal];
+            }  
+        }
+        console.log(save);
+    </script>
+</body>
+</html>

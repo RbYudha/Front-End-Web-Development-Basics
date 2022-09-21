@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Looping</title>
+</head>
+<body>
+    <h2>Latihan JS Looping</h2>
+    
+    <script>
+        //Tugas 1
+        console.log("---------------------");
+        console.log("Tugas 1 - perulangan while");
+        let orang = 1;
+        while (orang <= 20) {
+            console.log("Halo, saya orang ke " + orang)
+            orang++;
+        }
+
+        //Tugas 2
+        console.log("---------------------");
+        console.log("Tugas 2 - perulangan for");
+        for (let n = 1; n<=20; n++) {
+            console.log("Halo saya orang ke, "+n);
+        }
+
+        //Tugas 3
+        console.log("---------------------");
+        console.log("Tugas 3 - perulangan while cetak urutan ganjil dengan percabangan");
+        let orang2 = 1;
+        while (orang2 <= 20) {
+            if ( orang2 % 2 == 1 ) {
+                console.log("Halo, saya orang ke " + orang2)  
+            }
+            orang2++;
+        }
+
+        //Tugas 4 perulangan for cetak urutan ganjil dengan percabangan
+        console.log("---------------------");
+        console.log("Tugas 4 - perulangan for cetak urutan ganjil dengan percabangan" );
+        for (let n = 1; n<=20; n++) {
+            if ( n % 2 == 1 ) {
+            console.log("Halo saya orang ke, "+n);
+            }
+        }
+
+        // Tugas 5 v1 perulangan cetak OOOO
+        // console.log("Tugas 5");
+        // const o = 'OOOO';
+
+        // document.write ("<p> Cetak O : </p> ");
+        // for (let n = 1; n < 5; n++) {
+        //     console.log(o);
+        //     document.write(o + "<br>");
+        // }
+
+        // Tugas 5 v2 perulangan cetak OOOO
+        console.log("---------------------");
+        console.log("Tugas 5 perulangan cetak OOOO");
+        let cetak_o = "";
+        let cetak = "";
+        for (let n = 1; n < 5; n++) {
+            cetak_o = "";
+            for (let m = 1; m < 5; m++){
+                cetak_o = cetak_o + "O";          
+            }
+            cetak += cetak_o + "\n" ;
+        }
+        console.log(cetak);
+        
+    </script>
+</body>
+</html>
