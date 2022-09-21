@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+</head>
+
+<style>
+    .umum {
+        font-size: 20px;
+        font-style: Cursive;
+    }
+</style>
+
+<body>
+    <section>
+        <div id="general">
+            <h1>Coba-coba jquery</h1>
+            <div id="konten1"></div>
+            <div id="konten2"></div>
+            <div>
+                <p>Ini gambar</p>
+                <img style="width: 100px; height: 100px;"></img>
+                <br>
+                <input type="text" id="input1">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $('#konten1').text("Halo ini konten 1");
+        $('#konten2').html("<span> Halo ini konten 2</span>");
+        $('#konten1').css({'color':'cyan', 'background-color':'black'});
+        $('#konten1').append("<p>Coba tambah sesudah</p>");
+        $('#konten1').prepend("<p>Coba tambah sebelum</p>");
+        //$('img').attr('scr', ' ')
+        $('img').attr('src','https://img.freepik.com/premium-vector/hand-drawn-cute-bunny-heart-pink-background-print-design-rabbit-children-print-t-shirt-illustration_126000-257.jpg?w=2000');
+
+        $('#konten2').hide();
+        $('#konten2').show();
+
+        $('#general').addClass('umum');
+        //$('#general').removeClass('umum');
+
+        var cekClass = $('#general').hasClass('umum');
+        console.log(cekClass);
+
+        $('#input1').val('Alhamdulillah, istirahat');
+
+    </script>
+</body>
+</html>

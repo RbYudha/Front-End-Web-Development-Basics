@@ -1,0 +1,30 @@
+p {
+    color: blueviolet;
+}
+
+div p {
+    color: aqua;
+}
+
+#unik {
+    color: pink;
+}
+
+.unik {
+    color: green;
+}
+
+:root {
+    --bg-black-main: black;
+    --border-default: 2px solid red;
+}
+
+#cobaVar {
+    color: white;
+    background-color: var(--bg-black-main);
+    border: var(--border-default);
+}
+
+h2 {
+    background-color: bisque;
+}

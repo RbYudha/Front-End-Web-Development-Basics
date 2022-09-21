@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JavaScript</title>
+</head>
+<body>
+    <h1>Latihan JavaScript</h1>
+    
+    <div id="greeting"></div>
+    
+    <p>Kami sangat senang mendapatkan pengunjung dari kota <span id="hometown"></span>, semoga web ini dapat membantu mu belajar.
+    </p>
+    
+    <!-- <p>Wah kamu berasal dari <span id="hometown">wadad</span>, 
+    Kota <span id="hometown">dwadawda</span> merupakan kota yang sangat indah. Terimakasih telah mengunjungi web kami.</p> -->
+    
+
+    <script>
+        let visitor_name = prompt ("Masukan nama anda");
+        let welcome_message;
+        // let welcome_message = alert ("Selamat datang "+ visitor_name);
+        //document.getElementById("greeting").innerHTML = "Hai " + visitor_name ;
+        document.querySelector("#greeting").textContent = "Selamat datang "+visitor_name;
+        let hometown = prompt ("masukan kampung halaman anda");
+        // document.querySelector("#hometown").textContent = hometown;
+
+        const spanList = document.querySelectorAll("#hometown");
+            for (let n = 0; n < spanList.length; n++) {
+                spanList[n].textContent = hometown;
+            }
+
+    </script>
+</body>
+</html>

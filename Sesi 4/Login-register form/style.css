@@ -1,0 +1,48 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+.gradient-header {
+    /* fallback for old browsers */
+    background: #bd9400;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, rgba(189, 148, 0, 0.5), rgba(255, 0, 34, 0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, rgba(189, 148, 0, 0.5), rgba(255, 0, 34, 0.5))
+}
+
+.gradient-body {
+    /* fallback for old browsers */
+    background: #bd9400;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, rgba(189, 148, 0, 0.5), rgba(255, 0, 34, 0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, rgba(189, 148, 0, 0.5), rgba(255, 0, 34, 0.5))
+  }
+
+  .gradient-button {
+    /* fallback for old browsers */
+    background: #bd9400;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, rgba(189, 148, 0, 0.5), rgba(255, 0, 34, 0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, rgba(189, 148, 0, 0.5), rgba(255, 0, 34, 0.5))
+    }

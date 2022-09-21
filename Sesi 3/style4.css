@@ -1,0 +1,112 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flex-container {
+    width: 100vw;
+    background-color: burlywood;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.box-flex-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-left {
+    width: 30%;
+    height: 100px;
+    display: flex;
+}
+
+.container-right {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box1
+{
+    width: 100%;
+    height: 100px;
+    background-color: palevioletred;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2
+{
+    width: 100%;
+    height: 100px;
+    background-color: rebeccapurple;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box3
+{
+    width: 60%;
+    height: 50px;
+    background-color: goldenrod;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box4
+{
+    width: 40%;
+    height: 50px;
+    background-color: greenyellow;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box5
+{
+    width: 100%;
+    height: 50px;
+    background-color: lightskyblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

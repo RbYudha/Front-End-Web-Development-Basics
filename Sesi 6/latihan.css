@@ -1,0 +1,85 @@
+:root {
+    --bg-black-main: black;
+    --border-default: 2px solid red;
+    --warna-nav: blueviolet;
+}
+
+.grid-container {
+    height: 200vh;
+    width: 100vw;
+    display: grid;
+    background-color: bisque;
+    padding: 0px;
+    grid-template-areas: 
+    "box-a box-a box-a box-a box-a" 
+    "box-b box-c box-c box-c box-d"
+    "box-b box-c box-c box-c box-d"
+    "box-b box-c box-c box-c box-d"
+    "box-b box-c box-c box-c box-d" 
+    "box-e box-e box-e box-e box-e";
+}
+
+.box-a,
+.box-b,
+.box-c,
+.box-d,
+.box-e {
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+}
+
+.box-a {
+    height: auto;
+    width: auto;
+    grid-area: box-a;
+    background-color: cornflowerblue;
+    text-align: start;
+}
+
+.box-a h1 {
+    margin-left: 30px;
+    color: wheat;
+}
+
+.box-b {
+    height: auto;
+    width: 15vw;
+    grid-area: box-b;
+    background-color: lightgreen;
+    text-align: center;
+}
+.box-c {
+    height: auto;
+    width: 60vw;
+    grid-area: box-c;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    text-align: center;
+}
+.box-d {
+    height: auto;
+    width: 25vw;
+    grid-area: box-d;
+    background-color: white;
+    text-align: center;
+}
+.box-e {
+    height: auto;
+    width: auto;
+    grid-area: box-e;
+    background-color: cornflowerblue;
+    text-align: center;
+    color: wheat;
+}
+
+#content p {
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#navbar h2 {
+    color: var(--warna-nav);
+}

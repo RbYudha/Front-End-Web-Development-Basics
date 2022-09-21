@@ -1,0 +1,149 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flex-container {
+    width: 100vw;
+    height: 200px;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+.box1,
+.box2,
+.box3 {
+    width: 80px;
+    height: 80px;
+    background-color: lightsalmon;
+    color: white;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    /* justify-content: flex-end; */
+    align-items: center;
+    /* align-items: flex-end; */
+}
+
+.box1 {
+    width: 100%;
+    height: 80px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row;
+  min-height: 50px;
+  
+}
+.left {
+  flex: 1;
+  background-color: blue;
+}
+.main {
+  width: 60%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.col {
+  margin: 2px;
+}
+.top {
+
+    background: yellow;
+  }
+.middle {
+
+    background: pink;
+  }
+.bottom {
+
+    background: cyan;
+  }
+
+.right {
+  flex:2;
+  background-color: green;
+}
+
+
+/* grid */
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
+.grid-container {
+    display: grid;
+    background-color: bisque;
+    padding: 10px;
+    grid-template-areas: "box-a box-b box-c" "box-a box-b box-c" "box-a box-b box-c";
+}
+
+.box-a,
+.box-c,
+.box-d {
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+}
+
+.box-a {
+    grid-area: box-a;
+    background-color: aliceblue;
+}
+.box-b {
+    grid-area: box-b;
+    background-color: lightgreen;
+}
+.box-c {
+    grid-area: box-c;
+    background-color: gold;
+}

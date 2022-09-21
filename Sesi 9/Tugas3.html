@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tugas JavaScript 3</title>
+    </head>
+    <body>
+        <header>
+            <h1>Tugas JavaScript 3</h1>
+        </header>
+
+        <section id="data_pembeli">
+            <h3>Data Pembeli</h3>
+            <label>Nama:</label><br>
+            <input type="text" id="nama" value="">
+            <br><br>
+            <label>Gender</label><br>
+            <input type="radio" id="cowo" name="gender" value="Laki-Laki">
+            <label>Laki-Laki</label><br>
+            <input type="radio" id="cewe" name="gender" value="Perempuan">
+            <label>Perempuan</label>
+            <br><br>
+            <button onclick="submitData()">Submit</button>
+
+            <div>
+                <p id="greet"></p>
+            </div>
+        </section>
+        <!-- <br>
+        <section id="beli_minum">
+            <h3>Pesan minuman</h3>
+            <button onclick="">pesan</button>
+        </section> -->
+
+        <script>
+            function submitData() {
+                let customerName = document
+                    .getElementById("nama")
+                    .value;
+                alert ("Selamat datang- "+customerName);
+                // document.getElementById("greet").innerHTML = "Selamat datang";
+                // document.querySelector("#greet").textContent = "Selamat datang "+customerName;
+            }
+        </script>
+    </body>
+</html>

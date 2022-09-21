@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tugas2</title>
+    </head>
+    <body>
+        <h1>Tugas javaScript 2</h1>
+        <script>
+            let value = prompt("Enter your score, value from 1-100");
+
+            if (value != null) {
+                if (value >= 80 && value <= 100) {
+                    alert("your grade is A");
+                } else if (value >= 60 && value < 80) {
+                    alert("your grade is B");
+                } else if (value >= 40 && value < 60) {
+                    alert("your grade is C");
+                } else if (value < 40 && value > 1) {
+                    alert("your grade is D");
+                } else {
+                    alert("Invalid Input!");
+                }
+            } else {
+                alert("You have not entered your score");
+            }
+        </script>
+    </body>
+</html>
