@@ -21,17 +21,24 @@ var them_dogs = [{
     picture: 'http://media.cmgdigital.com/shared/img/photos/2014/08/01/5a/66/LadyLabrador.jpg'
 }]
 
+    let anjing_nama = "";
+    let anjing_age = "";
+    // let anjing_breed = "";
+    // let anjing_toys = "";
+    // them_dogs.forEach(kumpulan_anjing);
+    // document.getElementById("nama_anjing").innerHTML = anjing;
+
     them_dogs.forEach(them_dogs => {
-        console.log(them_dogs);
+        anjing_nama += them_dogs["name"] + "<br>";
+        anjing_age += them_dogs["picture"] + "<br>";
     });
 
-    let search = 10;
-    let propertyYouWant = "name";
+    document.querySelector("#nama_anjing").innerHTML = anjing_nama;
+    
 
-    let anjing = them_dogs.filter((item) => {
-        return item.age == search;
-    });
 
-    let result = anjing[0][propertyYouWant];
+   
 
-    document.getElementById("id1").innerText = result;
+
+
+    

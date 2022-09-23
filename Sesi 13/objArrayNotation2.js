@@ -28,10 +28,12 @@ var them_dogs = [{
     let search = 10;
     let propertyYouWant = "name";
 
-    let anjing = them_dogs.filter((item) => {
-        return item.age == search;
-    });
+    for (var i = 0; i < them_dogs.length; i++) {
+        if (them_dogs[i].age == search) {
+            document.getElementById("id1").innerText = 
+                them_dogs[i][propertyYouWant];
+        }
+    }
 
-    let result = anjing[0][propertyYouWant];
 
-    document.getElementById("id1").innerText = result;
+    
