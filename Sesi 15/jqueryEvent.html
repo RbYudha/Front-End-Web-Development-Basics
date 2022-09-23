@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JQuery Event</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.1.slim.js"
+            integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk="
+            crossorigin="anonymous"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container m-4">
+            <div>
+                <h1>JQuery Event Training</h1>
+            </div>
+            <!-- <div class="col mt-4">
+                <button id="idClick">Coba click</button>
+                <button id="id_dblclick">Coba dblClick</button>
+            </div>
+            <div id="idHover" style="height: 200px; width: 200px; background-color: aqua;"></div>
+
+            <span>Focus
+                <input id="idFokus" type="text" style="margin-top: 20px;">
+            </span>
+            <br><hr>
+            <h3>Select Change</h3>
+            <select name="" id="idChange">
+                <option value="Akai">Akai</option>
+                <option value="Balmond">Balmond</option>
+                <option value="Nana">Nana</option>
+            </select> -->
+            <hr>
+            <h3>latihan 1</h3>
+            <div id="coba">Dibuat dengan cinta</div>
+            <button id="btn-test">Btn</button>
+            <div id="coba2"></div>
+
+            <hr>
+            <h3>latihan2</h3>
+            <select id="coba3">
+                <option value="Mirana">Mirana</option>
+                <option value="Barathum">Barathum</option>
+                <option value="Meepo">Meepo</option>
+            </select>
+            <div id="berubah"></div>
+
+            <hr>
+            <h3>latihan3</h3>
+            <div id="stabilo">Bootcamp</div>
+            <button id="btn_hl">Hightlight</button>
+
+            <hr>
+            <h3>latihan4</h3>
+            <span>coba input<input id="input2" type="text"></span>
+            <h1 id="isi"></h1>
+
+            <hr>
+            <h3>latihan5</h3>
+            <div id="idHover5" style="height: 200px; width: 200px; background-color: yellow;">
+            
+            </div>
+
+        </div>
+
+        <script>
+            $("#idHover5").on("mouseover", function () {
+                $(this).css("background-color", "yellow");
+            });
+
+            $("#idHover5").on("mouseleave", function () {
+                $(this).css("background-color", "red");
+            });
+
+            $("#btn_hl").on("click", function () {
+                $("#stabilo").css("color", "red");
+                $("#stabilo").css("font-weight", "bold");
+            });
+
+            $("#input2").keyup(function () {
+                let let2 = $("#input2").val();
+                $("#isi").text(let2);
+            });
+
+            $("#coba3").on("change", function () {
+                //let coba = $( "#coba3 option:selected" ).text();
+                let coba = $(this).val();
+                //alert(coba);
+                $("#berubah").text(coba);
+            });
+
+            $("#idClick").on("click", function () {
+                alert("alert");
+            });
+
+            $("#btn-test").on("click", function () {
+                var text = $("#coba").text();
+                //alert(text);
+                $("#coba2").text(text);
+            });
+
+            $("#id_dblclick").on("dblclick", function () {
+                alert("double alert");
+            });
+
+            $(document).ready(function () {
+                $("#idHover").hover(function () {
+                    $(this).css("background-color", "yellow");
+                }, function () {
+                    $(this).css("background-color", "pink");
+                });
+            });
+
+            $("#idKeypress").on("keyup", function () {
+                alert("key press");
+            });
+
+            $("#idFokus").on("focus", function () {});
+
+            $("#idChange").on("change", function () {
+                let coba = $("#idChange option:selected").text();
+                alert(coba);
+            });
+        </script>
+    </body>
+</html>
