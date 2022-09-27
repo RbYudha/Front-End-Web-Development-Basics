@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Media Query</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous">
+    </head>
+
+    <style>
+        @media (orientation: landscape) {
+            body {
+                flex-direction: row;
+                background-color: goldenrod;
+            }
+        }
+
+        @media (orientation: portrait) {
+            body {
+                flex-direction: column;
+                background-color: palevioletred;
+            }
+            div {
+                border-radius: 50%;
+            }
+        }
+
+        @media print {
+            aside,
+            footer,
+            form,
+            header,
+            … {
+                display: none;
+            }
+            body {
+                line-height: 1.2;
+                flex-direction: row;
+                -webkit-print-color-adjust: exact !important;
+            }
+            div {
+                border-style: solid;
+                border-color: black;
+                border-width: 5px;
+                border-radius: 50%;
+            }
+        }
+    </style>
+
+    <body>
+
+        <div class="container">
+            <div class="row p-4 m-4">
+                <header>
+                    <h1>Coba Media Query</h1>
+                </header>
+                <div style="width: 200px; height: 100px; background-color: aqua; margin: 50px;"></div>
+                <div style="width: 200px; height: 100px; background-color: aqua; margin: 50px;"></div>
+                <div style="width: 200px; height: 100px; background-color: aqua; margin: 50px;"></div>
+                <div style="width: 200px; height: 100px; background-color: aqua; margin: 50px;"></div>
+                <div style="width: 200px; height: 100px; background-color: aqua; margin: 50px;"></div>
+                <div style="width: 200px; height: 100px; background-color: aqua; margin: 50px;"></div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

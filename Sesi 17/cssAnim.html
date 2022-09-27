@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .kotak1 {
+        background-color: brown;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto 0;
+        transition: 2s;
+    }
+
+    .kotak1:hover {
+        transform: rotate(45deg) scale(1.2, 1.2);
+        /* transform: rotateX(45deg); */
+        /* transform: rotateY(45deg); */
+    }
+
+    .kotak2 {
+        background-color: goldenrod;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto 0;
+        transition: 2s;
+    }
+
+    .kotak2:hover {
+        transform: rotate(-90deg) scaleY(1.5);
+        /* transform: rotateX(45deg); */
+        /* transform: rotateY(45deg); */
+    }
+
+    .kotak3 {
+        background-color: palevioletred;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto 0;
+        transition: 2s;
+    }
+
+    .kotak3:hover {
+        transform: skewY(30deg);
+        /* transform: rotateX(45deg); */
+        /* transform: rotateY(45deg); */
+    }
+
+    .kotak4 {
+        background-color: lightblue;
+        width: 200px;
+        height: 200px;
+        margin: 50px auto 0;
+        transition: 2s;
+    }
+
+    .kotak4:hover {
+        transform: translate(0px,-200px);
+        /* transform: rotateX(45deg); */
+        /* transform: rotateY(45deg); */
+    }
+
+    p {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="kotak1"></div>
+    <div class="kotak2"></div>
+    <div class="kotak3"></div>
+    <div class="kotak4"></div>
+    <p>contoh Transform</p>
+</body>
+</html>
