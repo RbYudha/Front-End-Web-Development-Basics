@@ -1,7 +1,0 @@
-input[type='submit'],button,[aria-label] {
-    cursor: pointer;
-}
-
-#spoiler {
-    display: none;
-}

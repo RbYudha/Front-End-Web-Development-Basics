@@ -5,13 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>RBK Audit Forensic - Blog</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/scrollAnim.css">
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
             crossorigin="anonymous">
+        <script defer="defer" src="./script/app.js"></script>
     </head>
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -26,11 +29,13 @@
             }
         }
     </style>
+
     <body>
+        <!-- header -->
         <section id="header">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark py-3">
                 <div class="container">
-                    <a href="#" class="navbar-brand">RBK Audit Forensik</a>
+                    <a href="index.html" class="navbar-brand fw-bolder text-light">RBK Audit Forensik</a>
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -52,7 +57,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="blog.html" class="nav-link">
+                                <a href="blog.html" class="nav-link active">
                                     Blog
                                 </a>
                             </li>
@@ -68,7 +73,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="todo.html" class="nav-link">
-                                    To Do's 
+                                    To Do's
                                 </a>
                             </li>
                         </ul>
@@ -76,112 +81,213 @@
                 </div>
             </nav>
         </section>
-        <!-- konten 1 -->
-        <div>
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-                <!-- Indicators/dots -->
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        <!-- konten 1 -->
+        <div id="carouselBlog" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button
+                    type="button"
+                    data-bs-target="#carouselBlog"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselBlog"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselBlog"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <div class="d-flex w-100 justify-content-center">
+                        <img
+                            src="./img/c1.png"
+                            class="d-block"
+                            alt=""
+                            style="height: 460px; object-fit: contain;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2 class="text-light fw-bold" style="-webkit-text-stroke: 1px black;">
+                                Apa pentingnya audit?</h2>
+                            <h5 class="text-light fw-bold" style="-webkit-text-stroke: 1px black;">Proses audit akan membantu mengidentifikasi
+                                <br>masalah yang membahayakan aset perusahaan.</h5>
+                        </div>
+                    </div>
+
                 </div>
-                
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShKZkWGmKBaiJ-P3cFn6rLiE9eOBTeSvBljA&usqp=CAU" alt="Los Angeles" class="d-block" style="width:100%;">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="data:image/jpeg;base64,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" alt="Chicago" class="d-block" style="width:100%">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYtZiGzdqE3R07l4RUbjUItoP5qHnGAom71g&usqp=CAU" alt="New York" class="d-block" style="width:100%">
-                  </div>
+                <div class="carousel-item">
+                    <div class="d-flex w-100 justify-content-center">
+                        <img
+                            src="./img/c2.png"
+                            class="d-block"
+                            alt=""
+                            style="height: 500px; object-fit: contain;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2 class="text-light fw-bolder" style="-webkit-text-stroke: 1px black;">Lindungi Asset Perusahaan mu</h2>
+                            <h5 class="text-light fw-bold" style="-webkit-text-stroke: 1px black;">Audit forensik dapat membantu perusahaan mengidentifikasi kas kerugian akibat
+                                <br>
+                                penggelapan uang dan pemalsuan dokumen.</h5>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Left and right controls/icons -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-                </button>
-              </div>
+                <div class="carousel-item">
+                    <div class="d-flex w-100 justify-content-center">
+                        <img
+                            src="./img/c3.png"
+                            class="d-block"
+                            alt=""
+                            style="height: 500px; object-fit: contain;">
+                        <div class="carousel-caption d-none d-md-block ">
+                            <h2 class="text-light fw-bolder" style="-webkit-text-stroke: 1px black;">Jalur Pengadilan</h2>
+                            <h5 class="text-light fw-bold" style="-webkit-text-stroke: 1px black;">Laporan oleh auditor forensik murupakan salah satu hal
+                                <br>
+                                yang diperlukan untuk melapor pidana penggelapan uang.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselBlog"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselBlog"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        
+
         <!-- konten2 -->
         <main>
             <div class="container py-4">
-              <div class="p-5 mb-4 bg-light rounded-3">
-                <div class="container-fluid py-5">
-                  <h1 class="display-5 fw-bold">Pengecekan Money Loundring</h1>
-                  <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-                </div>
-              </div>
-          
-              <div class="row align-items-md-stretch">
-                <div class="col-md-6">
-                  <div class="h-100 p-5 text-white bg-dark rounded-3">
-                    <h2>Pengecekan Suap</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum modi perferendis, eos beatae sit illum blanditiis facere officia. Minima sed ullam eum voluptatem molestiae laboriosam hic nemo quidem vitae minus?</p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="h-100 p-5 bg-light border rounded-3">
-                    <h2>Pengecekan Konflik Kepentingan</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, adipisci in quae vel laborum veritatis dignissimos labore at velit sapiente? Iusto ipsum qui quis repellat temporibus eveniet blanditiis excepturi eaque.</p>
-                  </div>
-                </div>
-              </div>
-          </main>
-          <div class="container-fluid bg-dark">
-            <footer class="py-5">
-                <div class="row">
-                    <div class="col-6 col-md-2 mb-3 ms-5">
-                        <h4 class="text-light">Section</h4>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2">
-                                <a href="index.html" class="nav-link p-0 text-light">Home</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="todo.html" class="nav-link p-0 text-light">To Do!</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                              <a href="AboutUs.html" class="nav-link p-0 text-light">About Us</a>
-                          </li>
-                            <li class="nav-item mb-2">
-                              <a href="ContactUs.html" class="nav-link p-0 text-light">Contact Us</a>
-                          </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-5 offset-md-1 mb-3">
-                        <form>
-                            <h5 class="text-light">Subscribe to our newsletter</h5>
-                            <p class="text-light">Monthly digest of what's new and exciting from us.</p>
-                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                                <label for="newsletter1" class="visually-hidden">Email address</label>
-                                <input
-                                    id="newsletter1"
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="Email address">
-                                <button class="btn btn-primary" type="button">Subscribe</button>
+                <!-- jumbo1 -->
+                <div id="sec_scroll">
+                    <section class="hidden">
+                        <div class="p-5 mb-4 bg-warning rounded-3">
+                            <div class="container-fluid py-2">
+                                <h1 class="display-5 fw-bold text-light">Audit Forensik</h1>
+                                <br>
+                                <div class="row">
+                                    <p class="col-md-7 fs-4 fw-semibold" style="text-align: justify;">
+                                        Audit forensik merupakan pemeriksaan dan evaluasi catatan keuangan perusahaan
+                                        atau personal guna mendapatkan bukti pada saat di pengadilan atau saat proses
+                                        hukum berlangsung, mencakup berbagai kegiatan investigasi yang kerap dilakukan
+                                        untuk menuntut suatu pihak atas penipuan, penggelapan, atau kejahatan yang
+                                        berkaitan dengan keuangan lainnya.
+                                    </p>
+                                    <img
+                                        class="col-md-7 fs-4"
+                                        src="./img/forensic.jpg"
+                                        alt=""
+                                        style="height: 320px; width: 380px; object-fit: cotain; border-radius: 50%;   display: block;
+                                    margin-left: auto;
+                                    margin-right: auto;">
+                                </div>
                             </div>
-                        </form>
+                        </div>
+                    </section>
+                </div>
+                <!-- /jumbo1 -->
+                <!-- jumbo2 -->
+                <div id="sec_scroll">
+                    <section class="hidden">
+                        <div class="row align-items-md-stretch">
+                            <div class="col-md-6">
+                                <div class="h-100 p-5 text-white bg-dark rounded-3">
+                                    <h2>Money Laundring?</h2>
+                                    <br>
+                                    <p style="text-align: justify;">Money laundering adalah tindakan menyamarkan
+                                        dana maupun aset yang bukan haknya dan berasal dari kegiatan kriminal. Tujuan
+                                        seseorang melakukan money laundering adalah tidak lain untuk memperkaya dirinya
+                                        sendiri. Tindakan ilegal ini dilakukan dengan cara menyamarkan sumber dana yang
+                                        seolah-olah berasal dari aktivitas legal, dan biasanya oknum money laundering
+                                        mengalihkan dana tersebut melalui kegiatan bisnis dan menyerahkan ke Lembaga
+                                        keuangan yang sah.
+                                        <br><br>Adapun dasar hukum kegiatan money laundering ini diatur dalam UU No. 8
+                                            Tahun 2010.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="h-100 p-5 bg-light border rounded-3">
+                                    <h2>Cegah Money Laundring</h2>
+                                    <br>
+                                    <p style="text-align: justify;">Dilansir dari halaman resmi OJK, terdapat
+                                        beberapa perilaku untuk mencegah seseorang dari tindakan money laundering.
+                                        Berikut beberapa pencegahan dari aktivitas merugikan ini :</p>
+                                    <br>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">1. Memelihara data statistik atas rekening yang telah dilaporkan.</li>
+                                        <li class="list-group-item">2. Melakukan pemantauan dan pengkinian data keuangan</li>
+                                        <li class="list-group-item">3. Secara tegas menolak untuk menyimpan dana
+                                            kepemilikan orang lain pada rekening yang dimiliki tanpa kejelasan asal usul
+                                            sumber dana.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+
+            <div class="container-fluid bg-dark">
+                <footer class="py-5">
+                    <div class="row">
+                        <div class="col-6 col-md-2 mb-3 ms-5">
+                            <h4 class="text-warning">Section</h4>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="index.html" class="nav-link p-0 text-light">Home</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="todo.html" class="nav-link p-0 text-light">To Do!</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="AboutUs.html" class="nav-link p-0 text-light">About Us</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="ContactUs.html" class="nav-link p-0 text-light">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-5 offset-md-1 mb-3">
+                            <form>
+                                <h5 class="text-warning">Subscribe ke Berita Audit Forensik Terbaru</h5>
+                                <p class="text-light">Dapatkan invormasi audit dari RBK-Team setiap bulan.</p>
+                                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                                    <input
+                                        id="newsletter1"
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Email address">
+                                    <button class="btn btn-primary" type="button">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
 
-                <div class="d-flex flex-column flex-sm-row justify-content-between border-top">
-                    <p class="mt-5 ms-5 text-light">
-                        &copy; 2022 RBK Company, Inc. All rights reserved.</p>
-                </div>
-            </footer>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between border-top">
+                        <p class="mt-4 ms-5 text-light">
+                            &copy; 2022 RBK Company, Inc. All rights reserved.</p>
+                    </div>
+                </footer>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-            crossorigin="anonymous"></script>
-    </body>
-</html>
+                <script
+                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+                    crossorigin="anonymous"></script>
+            </body>
+        </html>
