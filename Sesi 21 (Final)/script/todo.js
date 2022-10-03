@@ -1,4 +1,4 @@
-//Buat ambil ID disimpan dalam const
+//Buat ambil ID dan disimpan dalam const
 const selectForm = document.querySelector('#form');
 const selectInput = document.querySelector('#input');
 const selectKegiatan = document.querySelector('#kegiatan');
@@ -40,11 +40,14 @@ function cetaklist_kegiatan(list_kegiatan) {
     selectKegiatan.innerHTML = '';
     // for each untuk setiap aktifitas pada array list_kegiatan
     list_kegiatan.forEach(function (aktifitas) {
-        // check apakah aktifitas sudah beres
-        const checked = aktifitas.beres
-            ? 'checked'
-            : null;
+        // check apakah aktifitas sudah beres 'Tenary' 
+        const checked = aktifitas.beres ? 'checked' : null;
 
+        // if (aktifitas.beres == true) {
+        //   const checked = 'checked';
+        // } else {
+        //   const checked = null;
+        // }
         const li = document.createElement('li');
 
         li.setAttribute('class', 'list-group-item');

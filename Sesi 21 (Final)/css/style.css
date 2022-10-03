@@ -96,6 +96,7 @@ header ul li a:hover {
 #bulan {
     mix-blend-mode: screen;
     transform: translateY(-35px);
+    /* top: -40px; */
 }
 
 #g1 {
